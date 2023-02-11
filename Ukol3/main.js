@@ -8,70 +8,65 @@ let vek = prompt("Zadejte Váš věk: ");
 vysledekJedna.textContent = jmeno + " " + prijimeni + ", " + vek;
 
 /**********Ukol 2**********/
-function red(){
-    vysledekJedna.style.color = "red";
-    vysledekJedna.style.backgroundColor = "white";
-}
 
-function green(){
-    vysledekJedna.style.color = "green";
-    vysledekJedna.style.backgroundColor = "white";
-}
+function buttonColor(barva){
 
-function yellow(){
-    vysledekJedna.style.color = "yellow";
-    vysledekJedna.style.backgroundColor = "black";
-}
+    if(barva.target.textContent == "Red"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "white";
+    }
+    else if (barva.target.textContent == "Green"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "white";
+    }
+    else if (barva.target.textContent == "Yellow"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "black";
+    }
+    else if (barva.target.textContent == "Orange"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "white";
+    }
+    else if (barva.target.textContent == "Blue"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "white";
+    }
+    else if (barva.target.textContent == "Pink"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "white";
+    }
+    else if (barva.target.textContent == "Purple"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "white";
+    }
+    else if (barva.target.textContent == "Black"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "white";
+    }
+    else if (barva.target.textContent == "White"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "black";
+    }
+    else if (barva.target.textContent == "Brown"){
+        vysledekJedna.style.color = barva.target.textContent;
+        vysledekJedna.style.backgroundColor = "white";
+    }
+    else{
+        let aktualizaceStranky1 = document.querySelector(".castJedna");
+        aktualizaceStranky1.textContent = "";
 
-function orange(){
-    vysledekJedna.style.color = "orange";
-    vysledekJedna.style.backgroundColor = "white";
-}
+        let aktualizaceStranky2 = document.querySelector(".inputBarva");
+        aktualizaceStranky2.value = "";
 
-function blue(){
-    vysledekJedna.style.color = "blue";
-    vysledekJedna.style.backgroundColor = "white";
-}
+        window.location.reload();
+    }
 
-function pink(){
-    vysledekJedna.style.color = "pink";
-    vysledekJedna.style.backgroundColor = "white";
 }
-
-function purple(){
-    vysledekJedna.style.color = "purple";
-    vysledekJedna.style.backgroundColor = "white";
-}
-
-function black(){
-    vysledekJedna.style.color = "black";
-    vysledekJedna.style.backgroundColor = "white";
-}
-
-function white(){
-    vysledekJedna.style.color = "white";
-    vysledekJedna.style.backgroundColor = "black";
-}
-
-function brown(){
-    vysledekJedna.style.color = "brown";
-    vysledekJedna.style.backgroundColor = "white";
-}
-
-function refreshPage(){
-    let vlastniObarveni = document.querySelector(".inputBarva");
-    vlastniObarveni.value = "";
-    window.location.reload();
-} 
 
 
 //Zadani barvy do inputu
 function customColor(){
-    let vlastniObarveni = document.querySelector(".inputBarva");
-    vlastniObarveni = vlastniObarveni.value;
-
-    vlastniObarveni = vlastniObarveni.toLowerCase(); //Převedení na malé znaky
-    vlastniObarveni = vlastniObarveni.replace(/\s/g, ''); //Odstranění všech mezer
+    let vlastniObarveni = document.querySelector(".inputBarva").value.toLowerCase().replace(/\s/g, '');
 
     vysledekJedna.style.color = vlastniObarveni;
 
