@@ -1,0 +1,49 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main .ukol1, main .ukol2, main .ukol3 {
+  width: 800px;
+}
+main .ukol1 p, main .ukol2 p, main .ukol3 p {
+  text-align: justify;
+}
+main h2 {
+  text-align: center;
+}
+main .lekce4 {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .lekce4 .ukol1 .inputy, main .lekce4 .ukol2 .inputy {
+  width: 400px;
+  margin: auto;
+}
+main .lekce4 .ukol1 .inputy .tlacitko1, main .lekce4 .ukol2 .inputy .tlacitko1 {
+  text-align: center;
+}
+main .lekce4 .ukol2 span {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+}
+main .lekce4 .ukol2 .inputy .tlacitko1 button, main .lekce4 .ukol2 .inputy .tlacitko2 button {
+  width: 150px;
+}
+main .lekce4 .ukol3 .ukol3bc table, main .lekce4 .ukol3 .ukol3bc tr, main .lekce4 .ukol3 .ukol3bc td, main .lekce4 .ukol3 .ukol3bc th {
+  border: solid 1px black;
+  text-align: center;
+}
+main .lekce4 .ukol3 .ukol3bc table {
+  width: 800px;
+  margin-bottom: 20px;
+}
