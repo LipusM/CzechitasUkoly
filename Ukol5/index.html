@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Úkol č. 5</title>
+</head>
+
+<body>
+
+
+    <main>
+        <div class="ukol1">
+            <h1>Parsování data</h1>
+            <p>Bez použití knihovny <code>dayjs</code> napište funkci <code>parseDate</code>, která na vstupu obdrží
+                řetězec obsahující datum ve formátu DD.MM.YYYY a vrátí objekt s jednotlivýnu částmi zadaného data.
+                Příklad použití:</p>
+            <div class="kodUkol1">
+                <code>
+                    > parseDate('12.03.2015') <br>
+                    { day: 12, month: 3, year: 2015 } <br>
+                    > parseDate('06.04.2021') <br>
+                    { day: 6, month: 4, year: 2021 }
+                </code>
+            </div>
+            <div class="input-group mb-3 inputUkol1">
+                <span class="input-group-text" id="inputGroup-sizing-default">Zapište datum</span>
+                <input type="text" placeholder="DD.MM.YYYY" class="vstupniHodnotaDatumu"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <button onclick="parseData(event)" type="button" class="btn btn-secondary">Vytvoř objekt</button>
+            </div>
+            <div class="objektUkol1">
+                <p>
+                    let date = { <br>
+                    day: <span class="day"></span> <br>
+                    month: <span class="month"></span> <br>
+                    year: <span class="year"></span> <br>
+                    }
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="ukol2">
+            <h1>Formátování data</h1>
+            <p>Bez použití knihovny <code>dayjs</code> napište funkci <code>formDate</code>, která na vstupu obdrží
+                objekt představující datum v následujícím formátu.</p>
+            <p>{day: <span style="color: red">12</span>, month: <span style="color: red">3</span>, year: <span
+                    style="color: red">2015</span>}</p>
+            <p>Funkce vrátí řetězec představující datum ve formátu <b> DD.MM.YYYY</b>. Příklad použití.</p>
+            <p>> formtDate({day: 6, month: 4, year: 2021}) <br>
+                "06.04.2021"
+            </p>
+            <p>V tomto cvičení se vám jistě bude hodit metoda <code>padStart</code>. Zkuste také uvnitř těla funkce
+                použít destrukturování.</p>
+            <div class="objektUkol2">
+                <p>
+                    let date = { <br>
+                    day: <input type="text" class="day2 vstupniHodnotaDatumu" placeholder="Day (1 - 31)"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" maxlength="2"
+                        max="31"><br>
+                    month: <input type="text" class="month2 vstupniHodnotaDatumu" placeholder="Month (1 - 12)"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" maxlength="2"
+                        max="12"><br>
+                    year: <input type="text" class="year2 vstupniHodnotaDatumu" placeholder="Year"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                        maxlength="4"><br>
+                    }
+                </p>
+            </div>
+            <button onclick="formDate()" type="button" class="btn btn-secondary">Vytvoř objekt a vypiš
+                řetězec</button>
+                <!-- <button onclick="formDate(); window.location.reload()" type="button" class="btn btn-secondary">Vytvoř objekt a vypiš
+                    řetězec</button> -->
+            <h6><b>Vypsaný řetězec: </b><span class="vypsanyRetezec" style="color: green"></span></h6>
+        </div>
+
+        <hr>
+
+        <div class="ukol3">
+            <h1>Python zaokrouhlování</h1>
+            <p>Jak jistě znalci jazyka Python dobře vědí, funkce <code>round</code> v tomto jazyce zaokrouhluje malinko jinak, než
+                jsme zvyklí. Pokud je desetinná část čísla přesně 0.5, Python zaokrouhluje k nejbližšímu sudému číslu.
+                JavaScriptová funkce <code>Math.round</code> naopak provádí zaokrouhlování způsobem, na který jste zvyklí, tedy pro
+                0.5 vždy nahoru. Někomu by se po po Pythonovském zaokrouhlování mohlo stýskat. Napište proto funkci
+                jménem <code>round</code>, která bude zaokrouhlovat čísla na celé jednotky podle následujících pravidel.</p>
+                <ul>
+                    <li>a) Pokud je desetinná část <b>menší než 0.5</b>, zaokrouhlujeme <b>dolů</b>.</li>
+                    <li>b) Pokud je desetinná část <b>větší než 0.5</b>, zaokrouhlujeme <b>nahoru</b>.</li>
+                    <li>c) Pokud je desetinná <b>přesně rovna 0.5</b>, zaorkouhlujeme <b>k sudému číslu</b>. Tedy například <code>3.5</code>
+                    se zaorkouhlí na <code>4</code>, naopak <code>2.5</code> se zaokrouhlí na <code>2</code>.</li>
+                </ul>
+                <p>V tomto cvičení se vám může hodit funkce <code>Math.trunc</code>, která umí odříznout desetinnou část čísla.</p>
+
+                <ul>
+                    <li>
+                        <strong>Bonus: </strong> zajistěte, aby funkce správně fungovala i pro záporvná čísla.
+                        Tedy například <code>-3.5</code> se zaokrouhlí na <code>-4</code>, naopak na <code>-2.5</code> se zaokrouhlí na <code>-2</code>.
+                    </li>
+                </ul>
+                <!-- <div class="inputUkol3"> -->
+                    <div class="input-group mb-3 inputUkol3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Zapište desetinné číslo</span>
+                        <input type="text" placeholder="Např.: 3.5" class="vstupniHodnotaCisla"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <button onclick="round(event)" type="button" class="btn btn-secondary">Zaokrouhli</button>
+                    </div>
+                    <h6><b>Zaokrouhlené desetinné číslo: </b><span class="zaokrouhleneCislo"></span></h6>
+                <!-- </div> -->
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="https://unpkg.com/dayjs@latest/dayjs.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

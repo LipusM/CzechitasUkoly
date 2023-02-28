@@ -1,0 +1,109 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+main h1 {
+  text-align: center;
+}
+main code {
+  background-color: #d8d8d8;
+  border-radius: 5px;
+}
+main .ukol1 p {
+  text-align: justify;
+}
+main .ukol1 .kodUkol1 {
+  width: max-content;
+  text-align: center;
+  margin: auto;
+  background-color: #d8d8d8;
+  padding: 10px;
+  border-radius: 10px;
+}
+main .ukol1 .inputUkol1 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+main .ukol1 .inputUkol1 input {
+  width: 300px;
+  border: solid 1px lightslategray;
+  border-radius: 0px 10px 10px 0px !important;
+}
+main .ukol1 .inputUkol1 button {
+  margin-left: 50px !important;
+}
+main .ukol1 .objektUkol1 {
+  width: max-content;
+  margin: auto;
+}
+main .ukol2 {
+  /*         .inputUkol2{
+              margin-top: 10px;
+              display: flex;
+              justify-content: center;
+
+              input{
+                  width: 300px;
+                  border: solid 1px lightslategray;
+                  border-radius: 0px 10px 10px 0px !important;
+              }
+
+              button{
+                  margin-left: 50px !important;
+              }
+          } */
+}
+main .ukol2 p:nth-of-type(even) {
+  margin-top: -15px;
+  text-align: center;
+  background-color: #d8d8d8;
+  width: max-content;
+  margin: auto;
+  border-radius: 5px;
+  padding: 10px;
+}
+main .ukol2 .objektUkol2 {
+  width: max-content;
+  margin: auto;
+}
+main .ukol2 .objektUkol2 input {
+  flex: right;
+}
+main .ukol2 button {
+  display: flex;
+  margin: auto;
+}
+main .ukol3 p {
+  text-align: justify;
+}
+main .ukol3 ul {
+  list-style-type: none;
+  text-align: center;
+}
+main .ukol3 .inputUkol3 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+main .ukol3 .inputUkol3 input {
+  width: 300px;
+  border: solid 1px lightslategray;
+  border-radius: 0px 10px 10px 0px !important;
+}
+main .ukol3 .inputUkol3 button {
+  margin-left: 50px !important;
+}
+main .spravneObarveni {
+  color: green;
+}
