@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    
+<main>
+    <div class="ukol1">
+        <h1>Výplata</h1>
+        <p>Vytvořte funcki <code>salary</code> se třemi parametry:</p>
+        <ul>
+            <li>a) <code>wage</code> - hrubá mzda v korunách za hodinu</li>
+            <li>b) <code>hours</code> - kolik hodin denně průměrně pracujete</li>
+            <li>c) <code>days</code> - kolik dní v měsíci průměrně pracujete</li>
+        </ul>
+        <p>Funkce spočítá vaši hrubou měsíční mzdu v celých korunách.</p>
+        <p>Dále vytvořte funkci <code>taxed</code>, která na vstupu obdrží částku a procento zdanění, a vrátí částku
+        v celých korunách zdaněnou podle zadaných procent.</p>
+        <p>Použítím funkcí <code>salary</code> a <code>taxed</code> spočítejte svoji měsíční mzdu po 15% zdanění.</p>
+        
+        <div class="vstupniHodnotyU1">
+            <div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Mzda na hodinu v Kč</span>
+                <input class="mzda" type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Počet odpracovaných h denně</span>
+                <input class="hodiny" type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Počet dní v měsíci</span>
+                <input class="dny" type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+            </div>
+            <div class="mzdy">
+                <p>Hrubá mzda: <span class="hrubaMzda"></span></p>
+                <p>Čistá mzda: <span class="cistaMzda"></span></p>
+              </div>
+              <div class="tlacitko">
+                <button onclick="salary(); taxed()" type="button" class="btn btn-secondary">Spočítej mzdu</button>
+              </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="ukol2">
+        <h1>Kalkulačka</h1>
+        <p>Představte si úplně obyčejnou kalkulačku pouze s tlačítky pro čísla, čtyřmi základními operacemi
+        a tlačítkem pro rovná se. Pokud na takové kalkulačce chcete spočítat něco velmi jednoduchého,
+         například 2 + 3, musíme stisknout tlačíko <code>2</code>, poté <code>+</code>, pak <code>3</code> a pak <code>=</code>. Kalkulačka tedy nespočítá náš
+          výsledek ve chvíli, kdy mačkáme <code>+</code>, ale až ve chvíli, kdy mačkáme <code>=</code>. Musí si tedy zapamatovat, co 
+          jsme namačkali, a všecho spočítat až ve chvíli, kdy stiskneme <code>=</code>.</p>
+          <p>Napište funkci <code>calculate</code> se třemi parametry <code>number1</code>, <code>operation</code> a <code>number2</code>, které představují
+            první zadané číslo, zadanou operaci jako řetězec a druhé zadané číslo. Operace může být <code>'+'</code>, <code>'-'</code>, <code>'*'</code> 
+            nebo <code>'/'</code>. Funkce vrátí výsledek výpočtu pro zadanou operaci.</p>
+
+            <div class="kalkulacka">
+                <div class="input-group mb-3">
+                    <input class="vstupCislo" type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="cisla">
+                      <div>
+                        <button id="plus" onclick="matematickaOperace(event)" type="button" class="btn btn-secondary matematickaOperace oznaceni">+</button>
+                        <button id="minus" onclick="matematickaOperace(event)" type="button" class="btn btn-secondary matematickaOperace oznaceni">-</button>
+                        <button id="nasobeni" onclick="matematickaOperace(event)" type="button" class="btn btn-secondary matematickaOperace oznaceni">*</button>
+                        <button id="deleni" onclick="matematickaOperace(event)" type="button" class="btn btn-secondary matematickaOperace oznaceni">/</button>
+                        <button onclick="calculate(event)" type="button" class="btn btn-success">=</button>
+                      </div>
+                  </div>
+            </div>
+            <p>Výsledná hodnota je: <span class="vysledek"></span></p>
+    </div>
+
+    <hr>
+
+    <div class="ukol3">
+      <h1>Ceník</h1>
+      <p>Naklonujte si <a href="https://github.com/Czechitas-podklady-WEB/cenik-zadani" target="_blank">repozitář</a> repozitář se stránkou, která nabízí předplatné za nějaké
+        služby. Může jít například o internetovou televizi, pravidelné dovážky jídla nebo třeba webový hosting.</p>
+
+        <ul>
+          <li>a) Přidejte do stránky soubor s JavaScriptem, tentokrát bez atributu <code>type=module</code>, abyste mohli své funkce volat z konzole.</li>
+          <li>b) Napište funkci <code>selectPlan</code> s jedním parametrem <code>planNumber</code>. Tento parametr bude představovat číslo plánu. Funkce podle
+            čísla plánu vybere ze stránky správný DOM element a přidá k němu CSS třídu <code>plan--selected</code>. Vyzkoušejte vaši funkci v konzoli s různými čísly.</li>
+          <li>c) Opakovaným voláním funkce <code>selectPlan</code> lze na stránce postupně vybrat všechny plány. My bychom však chtěli, aby mohl být
+            vybrát vždy nejvýš jeden. Upravte funkci <code>selectPlan</code> tak, že vybere plán zadaný v parametru a u ostatních plánů výběr zruší. 
+            Ke zrušení výběru stačí z příslušného prvku odebrat třídu <code>plan--selected</code>.</li>
+        </ul>
+    </div>
+
+    <div class="container">
+      <h1>Naše nabídka (výběr proveď klikem na plán)</h1>
+      <div class="plans">
+        <button onclick="selectPlan(event)" id="plan1" class="plan plan--selected">
+          <h2 class="plan__type">Základní</h2>
+          <p class="plan__price">5€ / měsíc</p>
+        </button>
+        <button onclick="selectPlan(event)" id="plan2" class="plan">
+          <h2 class="plan__type">Rozšířený</h2>
+          <p class="plan__price">10€ / měsíc</p>
+        </button>
+        <button onclick="selectPlan(event)" id="plan3" class="plan">
+          <h2 class="plan__type">Mega</h2>
+          <p class="plan__price">20€ / měsíc</p>
+        </button>
+      </div>
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="main.js"></script>
+    <!-- <script src="lucka.js"></script> -->
+</body>
+</html>

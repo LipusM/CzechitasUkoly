@@ -1,0 +1,136 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin: auto;
+  width: 90%;
+}
+main .spravnyVysledek {
+  color: green;
+}
+main .ukol1 code {
+  background-color: #d8d8d8;
+}
+main .ukol1 ul {
+  list-style-type: none;
+}
+main .ukol1 h1, main .ukol1 p, main .ukol1 ul {
+  text-align: center;
+}
+main .ukol1 p {
+  margin: 10px 0px 10px 0px;
+}
+main .ukol1 .vstupniHodnotyU1 {
+  /* border: solid 1px blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .ukol1 .vstupniHodnotyU1 div span {
+  width: 300px;
+}
+main .ukol1 .vstupniHodnotyU1 div input {
+  width: 200px;
+  border: lightgray solid 1px;
+  border-radius: 0px 10px 10px 0px;
+}
+main .ukol1 .vstupniHodnotyU1 .tlacitko {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .ukol1 .vstupniHodnotyU1 .mzdy {
+  display: flex;
+}
+main .ukol1 .vstupniHodnotyU1 .mzdy p {
+  width: 250px;
+  text-align: left;
+}
+main .ukol1 .vstupniHodnotyU1 .mzdy p span {
+  margin: 0px;
+}
+main .ukol2 code {
+  background-color: #d8d8d8;
+}
+main .ukol2 ul {
+  list-style-type: none;
+}
+main .ukol2 h1, main .ukol2 p, main .ukol2 ul {
+  text-align: center;
+}
+main .ukol2 p {
+  margin: 10px 0px 10px 0px;
+}
+main .ukol2 .kalkulacka {
+  /* border:solid 1px red; */
+  width: max-content;
+  margin: auto;
+}
+main .ukol2 .kalkulacka .cisla div {
+  /* border: solid 1px green; */
+  text-align: center;
+}
+main .ukol3 code {
+  background-color: #d8d8d8;
+}
+main .ukol3 ul {
+  list-style-type: none;
+}
+main .ukol3 h1, main .ukol3 p, main .ukol3 ul {
+  text-align: center;
+}
+main .container h1 {
+  text-align: center;
+}
+main .markedButton {
+  background: red;
+}
+
+.container {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plans {
+  display: flex;
+  flex-direction: row;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.plan {
+  flex: 1;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #aaa;
+  text-align: center;
+  background-color: white;
+}
+
+.plan h2 {
+  color: blueviolet;
+}
+
+.plan p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.plan--selected {
+  background-color: blueviolet;
+  color: white;
+}
+
+.plan--selected h2 {
+  color: white;
+}
