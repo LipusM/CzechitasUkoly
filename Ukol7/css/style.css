@@ -1,0 +1,146 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main .banner {
+  border: solid 1px lightgray;
+  width: 95%;
+  margin: auto;
+  height: 500px;
+  background-image: url("../assets/czechitas.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+}
+main .banner .odkazy {
+  width: 450px;
+  position: absolute;
+  top: 450px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+main .banner .odkazy a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+}
+main .ukolCatering {
+  width: 95%;
+  margin: auto;
+}
+main .ukolCatering h1 {
+  text-align: center;
+}
+main .ukolCatering .text {
+  width: max-content;
+  margin: auto;
+}
+main .ukolCatering .text p code {
+  background-color: #d8d8d8;
+}
+main .ukolCatering .catering {
+  width: 35%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+main .ukolKostka {
+  width: 95%;
+  margin: auto;
+}
+main .ukolKostka h1 {
+  text-align: center;
+}
+main .ukolKostka .text {
+  width: max-content;
+  margin: auto;
+}
+main .ukolKostka .text p code {
+  background-color: #d8d8d8;
+}
+main .ukolKostka .kostka {
+  width: max-content;
+  margin: auto;
+}
+main .ukolKostka .kostka .dice {
+  width: 10rem;
+  height: 10rem;
+}
+main .ukolMinutka {
+  width: 95%;
+  margin: auto;
+}
+main .ukolMinutka h1 {
+  text-align: center;
+}
+main .ukolMinutka .text {
+  width: max-content;
+  margin: auto;
+}
+main .ukolMinutka .text p code {
+  background-color: #d8d8d8;
+}
+main .ukolMinutka .text ul {
+  list-style-type: none;
+}
+main .ukolMinutka .text ul code {
+  background-color: #d8d8d8;
+}
+main .ukolMinutka .container {
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .ukolMinutka .container .alarm {
+  width: 30rem;
+  height: 30rem;
+  background-size: contain;
+  background-image: url("../assets/alarm.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+main .ukolMinutka .container .alarm--ring {
+  animation: ring 100ms 50;
+}
+@keyframes ring {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(5deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+main .ukolMinutka .ukolB {
+  width: 400px;
+  margin: auto;
+}
+main .ukolMinutka .ukolB .tlacitka {
+  display: flex;
+  justify-content: space-around;
+}
+main .ukolMinutka .ukolB .tlacitka button {
+  width: 170px;
+}
+main .zelena {
+  color: green;
+}
