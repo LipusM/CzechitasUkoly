@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Úkol č. 8</title>
+</head>
+<body>
+    
+<main>
+    <div class="banner">
+        <div class="odkazy">
+            <a href="index.html">Auto</a>
+            <a href="prihlaseni.html">Přihlášení</a>
+            <a href="newsletterKontrola.html">Newsletter, kontrola</a>
+        </div>
+    </div>
+    <div class="newsletterKontrola">
+        <h1>Newsletter, kontrola</h1>
+        <p>Pokračujte v příkladu Newsletter z lekce. V tomto cvičení zařidíme, aby uživatel při zadávání e-mailu dostal 
+        zpětnou vazbu, pokud zadává neplatný vstup.</p>
+        <ul>
+            <li>a) V CSS si vytvořte třídu, která dělá výrazný červený rámeček kolem textového políčka.</li>
+            <li>b) Přidejte na textové políčko posluchač události <code>input</code>.</li>
+            <li>c) Během toho, jak uživatel píše, kontrolujte, jestli náhodou políčko není prázdné. 
+                V takovém případě na políčko přidejte třídu s červeným rámečkem. Pokud je vstup v pořádku, rámeček odeberte.</li>
+            <li>d) Zobrazte červený rámeček i v případě, že zadaný e-mail neobsahuje zavináč. K tomu můžete použít metodu <code>indexOf</code> 
+                nebo <code>includes</code>.</li>
+        </ul>
+        <div class="formular2">
+            <form class="formular3">
+                <div class="mb-3">
+                  <label for="Email2" class="form-label">E-mail</label>
+                  <input oninput="kontrolaEmailu()" type="email" class="form-control" id="Email2" aria-describedby="emailHelp">
+                </div>
+              </form>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="main3.js"></script>
+</body>
+</html>

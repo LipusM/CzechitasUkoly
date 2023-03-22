@@ -1,0 +1,5 @@
+Posouvání auta:
+-Jak lze vidět v main.js, tak překročení hranic mám řešeno přes screen.width a coordinatesX / coordinatesY. Ale nepřijde mi to jako košer způsob. Jakým způsobem se toto řeší v praxi?
+
+-Řádek 69 - 77 mám řešený pro MacBook Air 2018 a výše (kromě 2022 a výše, u těch displej vypadá trochu jinak). Velikost jsem vzal z této stránky: https://screensiz.es/ 
+Původně jsem tam měl screen.width === 1440 && screen.height === 900. Ovšem když jsem si to zobrazil na svém Macu, tak mi to u toho reagovalo divně. Dal jsem screen.width a screen.height a vyjely mi parametry, které mám na řádku 70. Jsem z toho docela zmatený. Znáš nějakou stránku, kde můžu zjistit přesné hodnoty viewportu/se to řeší přes to screen.width a screen.height/ se to řeší v praxi úplně jinak?
