@@ -99,6 +99,9 @@ main .minutka2Zadani .alarm {
   background-size: contain;
   background-image: url("../assets/alarm.svg");
 }
+main .minutka2Zadani .alarm .spravneObarveni {
+  border: solid 2px green !important;
+}
 @keyframes ring {
   0% {
     transform: rotateZ(0deg);
