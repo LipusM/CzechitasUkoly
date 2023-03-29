@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JavaScript</title>
+</head>
+
+<body>
+
+
+    <main>
+        <div class="banner">
+            <div class="odkazy">
+                <a href="index.html">Počítadlo</a>
+                <a href="minutka2.html">Minutka2</a>
+            </div>
+        </div>
+
+        <div id="minutka2">
+            <h1>Minutka2</h1>
+            <p>Stáhněte si <a
+                    href="https://github.com/Czechitas-podklady-WEB/minutka-2-zadani/archive/refs/heads/main.zip">základ
+                    aplikace</a> základ aplikace pro vylepšenou kuchyňskou minutku.</p>
+            <p>Umožněte uživateli zadat počet vteřin skrze připravené textové poličko. K získání hodnoty z políčka
+                použijte vlastnost <code>value</code>. Nezapomeňte obsah políčka zkonvertovat na číslo. Minutku spusťte
+                tlačítkem
+                Start.</p>
+            <p>Zařiďte, aby minutka správně odpočítávala vteřiny a začala zvonit ve chvíli, kdy dosáhne nuly. Pokud si
+                věříte, zkuste celý program napsat rovnou bez nápovědy. Pokud malinko ztrácíte půdu pod nohama,
+                následujte tyto kroky.</p>
+            <ul>
+                <li>a) Vytvořte si proměnou <code>time</code>, do které uložíte počáteční počet vteřin zadaný
+                    uživatelem.</li>
+                <li>b) Při kliknutí na Start nastavte časovač pomocí <code>setInterval</code>. Ten se bude opakovat každou vteřinu a
+                    pokaždé sníží hodnotu v proměnné <code>time</code> o jedna.</li>
+                <li>c) Jakmile proměnná <code>time</code> dosáhne nuly, zapněte zvonění a zrušte časovač aby nezačal počítat do mínusu.</li>
+            </ul>
+            <div class="minutka2Zadani">
+                <audio id="zvoneni" src="assets/alarm.mp3" type="audio/mpeg"></audio>
+                  <div class="container">
+                    <form class="controls">
+                      <button onclick="spustOdpocet(event)" type="submit">Start</button>
+                      <button onclick="resetOdpocet(event)">Reset</button>
+                      <label>
+                        <input type="text" class="time-input" />
+                        sekund
+                      </label>
+                    </form>
+                    <div class="alarm">
+                      <div class="alarm__minutes"></div>
+                      <div class="alarm__seconds">00</div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="main1.js"></script>
+</body>
+
+</html>
